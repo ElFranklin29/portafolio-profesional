@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="logo">FC</div>
+    <div class="nav-center">
+      <a href="#" class="nav-link">Inicio</a>
+      <div class="dropdown">
+        <span class="nav-link" id="navegarBtn">Navegar ▾</span>
+        <div class="dropdown-content" id="navegarDropdown">
+          <a href="#">About</a>
+          <a href="#">Estudios</a>
+          <div class="sub-dropdown">
+            <a href="#" id="habilidadesBtn">Habilidades ▾</a>
+            <div class="sub-dropdown-content" id="habilidadesDropdown">
+              <a href="#">Habilidades Blandas</a>
+              <a href="#">Habilidades Técnicas</a>
+            </div>
+          </div>
+          <a href="#">Proyectos</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle menú "Navegar"
+    const navegarBtn = document.getElementById('navegarBtn');
+    const navegarDropdown = document.getElementById('navegarDropdown');
+
+    navegarBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navegarDropdown.classList.toggle('show');
+      habilidadesDropdown.classList.remove('show'); // Cierra habilidades si está abierto
+    });
+
+    // Toggle submenú "Habilidades"
+    const habilidadesBtn = document.getElementById('habilidadesBtn');
+    const habilidadesDropdown = document.getElementById('habilidadesDropdown');
+
+    habilidadesBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      habilidadesDropdown.classList.toggle('show');
+    });
+
+    // Cierra los menús si haces click afuera
+    window.addEventListener('click', (e) => {
+      if (!e.target.matches('.nav-link')) {
+        navegarDropdown.classList.remove('show');
+        habilidadesDropdown.classList.remove('show');
+      }
+    });
+  </script>
+
+
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="label-top">DESARROLLADOR</div>
+        <h1 class="hero-name">Franklin</h1>
+      </div>
+
+      <div class="hero-right">
+        <div>
+          <h1 class="hero-name">Castañeda</h1>
+          <div class="label-bottom">BACKEND</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="img/imagen-ex.jpg" alt="Retrato del desarrollador">
+        </div>
+        <div class="about-text">
+          <h2 class="about-title">¿Quien <span class="highlight">soy?</span></h2>
+          <p>
+            Soy ingeniero de software en formación, apasionado por la tecnología y curioso por naturaleza. Me encanta
+            descubrir cómo funcionan las cosas y llevar cada reto un paso más allá. Trabajo con Java, Python y
+            frameworks como Spring Boot y Django. Persevero, aprendo, y siempre doy lo mejor de mí.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  
+      <section class="education">
+        <h2 class="studies-title">Estudios</h2>
+
+        <div class="studies-grid">
+          <div class="study-card">
+            <div class="study-icon">
+              <img src="img/logo-umb.png" alt="Logo de la escuela">
+            </div>
+            <div class="study-content">
+              <div class="study-front">
+                <h3 class="study-title">Ingeniería de Software </h3>
+                <p class="study-school">U. Manuela Beltran</p>
+                <p class="study-dates">Ene 2023 - Nov 2026</p>
+              </div>
+              <div class="study-back">
+                <p class="study-description">
+                  Formación integral en desarrollo, análisis, diseño y gestión de software.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="study-card">
+            <div class="study-icon">
+              <img src="img/educamas_logo.jpg" alt="Logo de la escuela">
+            </div>
+            <div class="study-content">
+              <div class="study-front">
+                <h3 class="study-title">Desarrollador Junior Frontend</h3>
+                <p class="study-school">Programate School</p>
+                <p class="study-dates">Abr 2022 - Nov 2022</p>
+              </div>
+              <div class="study-back">
+                <p class="study-description">
+                  Formación intensiva en HTML, CSS, JavaScript y herramientas modernas de frontend.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="study-card">
+            <div class="study-icon">
+              <img src="img/educamas_logo.jpg" alt="Logo de la escuela">
+            </div>
+            <div class="study-content">
+              <div class="study-front">
+                <h3 class="study-title">Empleatech</h3>
+                <p class="study-school">Educamas</p>
+                <p class="study-dates">Abr 2025 - May 2025</p>
+              </div>
+              <div class="study-back">
+                <p class="study-description">
+                  Exploración de perfil profesional, habilidades laborales y aspectos legales del empleo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    <section class="skills">
+      <h2 class="main-title">Habilidades <span class="highlight">Tecnicas</span></h2>
+
+      <div class="skills-grid-tech">
+        <!-- Frontend -->
+        <div class="skills-category">
+          <h3 class="category-title">Frontend</h3>
+          <div class="skills-list">
+            <!-- Card -->
+            <div class="skill-card">
+              <img src="img/html.png" alt="HTML5 Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">HTML5</h4>
+                <p class="skill-level intermedio">Intermedio</p>
+              </div> 
+            </div>
+            
+            <div class="skill-card">
+              <img src="img/css.png" alt="HTML5 Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">CSS</h4>
+                <p class="skill-level intermedio">Intermedio</p>
+              </div> 
+            </div>
+
+
+            <div class="skill-card">
+              <img src="img/vue.png" alt="HTML5 Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">Vue</h4>
+                <p class="skill-level principiante">Principiante</p>
+              </div> 
+            </div>
+
+            <div class="skill-card">
+              <img src="img/Bootstrap.svg" alt="HTML5 Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">Bootstrap</h4>
+                <p class="skill-level principiante">Principiante</p>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skills-category">
+          <h3 class="category-title">Backend</h3>
+          <div class="skills-list">
+            <div class="skill-card">
+              <img src="img/java.png" alt="Backend Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">Java</h4>
+                <p class="skill-level intermedio">Intermedio</p>
+              </div>
+            </div>
+            <div class="skill-card">
+              <img src="img/spring.svg" alt="Backend Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">Spring</h4>
+                <p class="skill-level principiante">Principiante</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <img src="img/python.png" alt="Backend Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">Python</h4>
+                <p class="skill-level intermedio">Intermedio</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <img src="img/fastapi.png" alt="Backend Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">FastAPI</h4>
+                <p class="skill-level intermedio">Intermedio</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skills-category">
+          <h3 class="category-title">Data Base</h3>
+          <div class="skills-list">
+            <div class="skill-card">
+              <img src="img/mysql.webp" alt="Database Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">MySQL</h4>
+                <p class="skill-level intermedio">Intermedio</p>
+              </div>
+            </div>
+            <div class="skill-card">
+              <img src="img/mongo.webp" alt="Database Logo" class="skill-icon">
+              <div class="skill-info">
+                <h4 class="skill-name">MongoDB</h4>
+                <p class="skill-level principiante">Principiante</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools abajo -->
+      <div class="tools-category">
+        <h3 class="category-title">Tools</h3>
+        <div class="skills-list">
+          <div class="skill-card">
+            <img src="img/github.png" alt="Tool Logo" class="skill-icon">
+            <div class="skill-info">
+              <h4 class="skill-name">Github</h4>
+              <p class="skill-level intermedio">Intermedio</p>
+            </div>
+          </div>
+          <div class="skill-card">
+            <img src="img/postman.webp" alt="Tool Logo" class="skill-icon">
+            <div class="skill-info">
+              <h4 class="skill-name">Postman</h4>
+              <p class="skill-level intermedio">Intermedio</p>
+            </div>
+          </div>
+          <div class="skill-card">
+            <img src="img/jira.png" alt="Tool Logo" class="skill-icon">
+            <div class="skill-info">
+              <h4 class="skill-name">Jira</h4>
+              <p class="skill-level intermedio">Intermedio</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <h2 class="section-title">Habilidades Blandas</h2>
+
+      <div class="skills-grid-soft">
+
+        <!-- Card 1 -->
+        <div class="soft-skill-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3 class="skill-title">Empatía</h3>
+              <p class="skill-description">“Capacidad de ser ponerse en los zapatos del otro”</p>
+            </div>
+            <div class="card-back">
+              <h3 class="skill-title">Empatía</h3>
+              <p class="skill-example">
+                Lo apliqué en la universidad cuando en una clase a un compañero se le cayó el lápiz y se lo pasé.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aquí puedes copiar el mismo bloque para las otras 5 cards -->
+
+        <!-- Card 2 -->
+        <div class="soft-skill-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-description">“Transmitir ideas de forma clara y efectiva”</p>
+            </div>
+            <div class="card-back">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-example">
+                Presenté un proyecto en equipo resumiendo ideas complejas de forma sencilla.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="soft-skill-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-description">“Transmitir ideas de forma clara y efectiva”</p>
+            </div>
+            <div class="card-back">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-example">
+                Presenté un proyecto en equipo resumiendo ideas complejas de forma sencilla.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="soft-skill-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-description">“Transmitir ideas de forma clara y efectiva”</p>
+            </div>
+            <div class="card-back">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-example">
+                Presenté un proyecto en equipo resumiendo ideas complejas de forma sencilla.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="soft-skill-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-description">“Transmitir ideas de forma clara y efectiva”</p>
+            </div>
+            <div class="card-back">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-example">
+                Presenté un proyecto en equipo resumiendo ideas complejas de forma sencilla.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="soft-skill-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-description">“Transmitir ideas de forma clara y efectiva”</p>
+            </div>
+            <div class="card-back">
+              <h3 class="skill-title">Comunicación</h3>
+              <p class="skill-example">
+                Presenté un proyecto en equipo resumiendo ideas complejas de forma sencilla.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+
+      <h2 class="title-projects">Proyectos</h2>
+
+      <div class="container-project">
+        <!--Card 1-->
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img
+                src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+              <h3>Design</h3>
+              <p class="p-title">HTML, CSS, Java</p>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
+                at.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 2-->
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img
+                src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+              <h3>Design</h3>
+              <p class="p-title">HTML, CSS, Java</p>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
+                at.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!--Card 3-->
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img
+                src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+              <h3>Design</h3>
+              <p class="p-title">HTML, CSS, Java</p>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
+                at.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="footer-externo">
+    <div class="footer-container">
+      <h3 class="footer-nombre">Franklin Castañeda</h3>
+      <div class="footer-iconos">
+        <a href="https://github.com/" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+        </a>
+        <a href="mailto:correo@ejemplo.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icono-red fondo-rojo">
+        </a>
+        <a href="https://linkedin.com/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="cv.pdf" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="CV" class="icono-red fondo-azul">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

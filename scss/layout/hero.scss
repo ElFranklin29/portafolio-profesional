@@ -1,0 +1,67 @@
+@use "../base/variables.scss" as vars;
+
+.hero {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    color: white;
+       
+  }
+  
+.hero-left {
+    flex: 1;
+    background-color: vars.$secundary-color; /* negro oscuro */
+    
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+   
+    text-align: right;
+
+}
+  
+  
+.hero-right {
+    flex: 1;
+    background-color: vars.$primary-color; /* morado */
+    display: flex;
+    align-items: start;
+
+    flex-direction: column;
+    justify-content: center;
+    
+   
+}
+
+.hero-name{
+    font-size: 5.5rem;
+    font-weight: 400;
+}
+
+
+
+.label-top, .label-bottom {
+    background-color: #ddd;
+    color: vars.$secundary-color;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-align: center;
+    
+  }
+
+  .label-top{
+    width: 27rem;
+
+    
+  }
+  
+  .label-bottom {
+    color: vars.$primary-color;
+
+    width: 100%;
+  }

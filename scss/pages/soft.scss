@@ -1,0 +1,75 @@
+
+.soft{
+    height: 100vh;
+    background-color: #b86adf; /* Morado clarito */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 4rem;
+  }
+  
+  /* Grid de cards */
+  .skills-grid-soft {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Card (ya lo habíamos hecho pero lo adapto) */
+  .soft-skill-card {
+    width: 200px;
+    height: 180px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .soft-skill-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5e5;
+    color: #1c1c1c;
+    border-radius: 12px;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .card-back {
+    background-color: #1c1c1c;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .skill-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-description, .skill-example {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  

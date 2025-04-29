@@ -1,0 +1,54 @@
+@use "../base/variables.scss" as vars;
+.about-section {
+    background-color: vars.$third-color; /* gris claro como en el diseño */
+    padding: 4rem 2rem;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    flex-wrap: wrap;
+  }
+  
+  .about-image {
+    position: relative;
+    width: 250px;
+    box-shadow: -12px 12px 0px vars.$secundary-color;
+  }
+  
+  .about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  .about-text {
+    max-width: 600px;
+    text-align: center;
+  
+  }
+  
+  .about-title {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-title .highlight {
+    background-color: vars.$secundary-color;
+    color: vars.$primary-color; /* color morado pastel */
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+  }
+  
+  .about-text p {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    color: #111;
+  }

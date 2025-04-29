@@ -1,0 +1,48 @@
+
+  
+  .footer-container {
+    background-color: #ddd;
+    height: 15vh;
+    margin: 0 auto;
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-nombre {
+    margin: 0;
+    font-size: 25px;
+    color: #000;
+    font-weight: 300;
+  }
+  
+  .footer-iconos {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-iconos img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+  }
+  
+  .footer-iconos img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Iconos con fondo */
+  .icono-red {
+    border-radius: 50%;
+    padding: 4px;
+    background-color: transparent;
+  }
+  
+  .fondo-rojo {
+    background-color: #e74c3c;
+  }
+  
+  .fondo-azul {
+    background-color: #3498db;
+  }

@@ -114,3 +114,59 @@
   .study-card:hover .study-back {
     opacity: 1;
   }
+
+  @media screen and (max-width: 768px) {
+    .education {
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    .studies-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      padding: 0.5rem 0.8rem;
+    }
+  
+    .studies-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .study-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+  
+    .study-icon img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .study-title {
+      font-size: 1.2rem;
+    }
+  
+    .study-school,
+    .study-dates,
+    .study-description {
+      font-size: 0.95rem;
+    }
+  
+    .study-content {
+      position: static;
+    }
+  
+    .study-front,
+    .study-back {
+      position: static;
+      opacity: 1;
+    }
+  
+    .study-card:hover .study-front,
+    .study-card:hover .study-back {
+      opacity: 1;
+    }
+  }
+  

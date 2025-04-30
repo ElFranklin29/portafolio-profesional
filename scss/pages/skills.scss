@@ -58,7 +58,11 @@
 .skill-icon {
   width: 40px;
   height: 40px;
+  border-radius: 8px;
+  background-color: #fff; /* o un gris claro si preferís */
+  padding: 4px;
 }
+
 
 .skill-info {
   text-align: left;
@@ -96,3 +100,19 @@
   width: 220px;
   margin: 0 auto;
 }
+
+.skill-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 10px rgba(197, 134, 255, 0.5);
+}
+
+
+
+@media (max-width: 768px) {
+  .skills-grid-tech {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

@@ -181,6 +181,34 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-left,
+  .hero-right {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .hero-left {
+    align-items: center;
+  }
+  .hero-right {
+    align-items: center;
+  }
+  .hero-name {
+    font-size: 3.5rem;
+  }
+  .label-top,
+  .label-bottom {
+    font-size: 1.5rem;
+    width: auto;
+  }
+}
 .about-section {
   background-color: #D9D9D9; /* gris claro como en el diseño */
   padding: 4rem 2rem;
@@ -234,6 +262,27 @@
   color: #111;
 }
 
+@media screen and (max-width: 768px) {
+  .about-section {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  .about-image {
+    width: 200px;
+    box-shadow: -8px 8px 0px #1A1919;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-text p {
+    font-size: 1.3rem;
+  }
+}
 .education {
   padding: 3rem 2rem;
   background-color: white;
@@ -340,6 +389,51 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .education {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .studies-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .studies-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .study-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  .study-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  .study-title {
+    font-size: 1.2rem;
+  }
+  .study-school,
+  .study-dates,
+  .study-description {
+    font-size: 0.95rem;
+  }
+  .study-content {
+    position: static;
+  }
+  .study-front,
+  .study-back {
+    position: static;
+    opacity: 1;
+  }
+  .study-card:hover .study-front,
+  .study-card:hover .study-back {
+    opacity: 1;
+  }
+}
 .projects {
   height: 100vh;
   background-color: #1A1919; /* Morado clarito */
@@ -513,6 +607,9 @@
 .skill-icon {
   width: 40px;
   height: 40px;
+  border-radius: 8px;
+  background-color: #fff; /* o un gris claro si preferís */
+  padding: 4px;
 }
 
 .skill-info {
@@ -552,6 +649,18 @@
   margin: 0 auto;
 }
 
+.skill-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 10px rgba(197, 134, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .skills-grid-tech {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .soft {
   height: 100vh;
   background-color: #b86adf; /* Morado clarito */

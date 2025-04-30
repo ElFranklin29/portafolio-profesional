@@ -65,3 +65,37 @@
 
     width: 100%;
   }
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .hero-left,
+    .hero-right {
+      flex: none;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  
+    .hero-left {
+      align-items: center;
+    }
+  
+    .hero-right {
+      align-items: center;
+    }
+  
+    .hero-name {
+      font-size: 3.5rem;
+    }
+  
+    .label-top,
+    .label-bottom {
+      font-size: 1.5rem;
+      width: auto;
+    }
+  }

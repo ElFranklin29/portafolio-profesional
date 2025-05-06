@@ -401,13 +401,15 @@
 }
 
 .card .face {
-  width: 300px;
+  width: 350px;
   height: 200px;
   transition: 0.5s;
+  padding: 0.5rem;
 }
 
 .card .face.face1 {
   position: relative;
+  height: 250px;
   background: #333;
   display: flex;
   justify-content: center;
@@ -435,9 +437,9 @@
 }
 
 .card .face.face1 .content h3 {
-  margin: 10px 0 0;
+  margin: 30px 0 0;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   font-size: 1.5em;
 }

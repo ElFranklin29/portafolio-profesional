@@ -28,7 +28,7 @@
     background-color: vars.$primary-color; /* morado */
     display: flex;
     align-items: start;
-
+  
     flex-direction: column;
     justify-content: center;
     
@@ -38,6 +38,7 @@
 .hero-name{
     font-size: 5.5rem;
     font-weight: 400;
+    
 }
 
 
@@ -71,7 +72,12 @@
       flex-direction: column;
       height: auto;
     }
+    
+
+   
   
+
+
     .hero-left,
     .hero-right {
       flex: none;
@@ -96,6 +102,8 @@
     .label-top,
     .label-bottom {
       font-size: 1.5rem;
-      width: auto;
+        width: auto;
+        max-width: 90%; // añade esta línea para evitar desbordamiento
+        text-align: center;
     }
   }

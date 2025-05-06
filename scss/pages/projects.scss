@@ -18,11 +18,17 @@
   }
 
 .container-project{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  overflow-x: hidden; /* solo aquí */
+  contain: layout paint; /* mejora animaciones */
+}
   
+  .container-project {
+    display: grid;
+ 
+  }
 
 
 
@@ -116,3 +122,51 @@
     background: #333;
     color: #fff;
 }
+
+
+
+@media (max-width: 1024px) {
+    .container-project {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container-project {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .card .face {
+      width: 100%;
+      max-width: 90vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title-projects {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .card .face.face1 .content img {
+      max-width: 80px;
+    }
+  
+    .card .face.face1 .content h3 {
+      font-size: 1.2em;
+    }
+  
+    .p-title {
+      font-size: 0.9rem;
+    }
+  
+    .card .face.face2 {
+      padding: 15px;
+    }
+  
+    .card .face.face2 .content a {
+      font-size: 0.9rem;
+      padding: 4px 8px;
+    }
+  }

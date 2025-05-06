@@ -207,6 +207,8 @@
   .label-bottom {
     font-size: 1.5rem;
     width: auto;
+    max-width: 90%;
+    text-align: center;
   }
 }
 .about-section {
@@ -454,6 +456,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  overflow-x: hidden; /* solo aquí */
+  contain: layout paint; /* mejora animaciones */
+}
+
+.container-project {
+  display: grid;
 }
 
 .card {
@@ -547,6 +555,43 @@
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .container-project {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .container-project {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .card .face {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
+@media (max-width: 480px) {
+  .title-projects {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .card .face.face1 .content img {
+    max-width: 80px;
+  }
+  .card .face.face1 .content h3 {
+    font-size: 1.2em;
+  }
+  .p-title {
+    font-size: 0.9rem;
+  }
+  .card .face.face2 {
+    padding: 15px;
+  }
+  .card .face.face2 .content a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+}
 .skills {
   padding: 3rem 2rem;
   background-color: #e5e5e5;
@@ -671,10 +716,14 @@
   padding: 2rem;
 }
 
-.section-title {
+.soft-title {
   font-size: 2rem;
   color: white;
   margin-bottom: 4rem;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Grid de cards */
@@ -735,6 +784,25 @@
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .skills-grid-soft {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .soft {
+    height: 110vh;
+  }
+  .skills-grid-soft {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .soft-skill-card {
+    min-width: 250px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
 * {
   margin: 0;
   padding: 0;

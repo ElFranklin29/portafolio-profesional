@@ -7,13 +7,19 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+   
   }
   
-  .section-title {
+  .soft-title {
     font-size: 2rem;
     color: white;
     margin-bottom: 4rem;
+    text-align: center;
+    word-break: break-word;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
   }
+
   
   /* Grid de cards */
   .skills-grid-soft {
@@ -71,5 +77,29 @@
   .skill-description, .skill-example {
     font-size: 0.9rem;
     text-align: center;
+  }
+  
+  @media (max-width: 1024px) {
+    .skills-grid-soft {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    
+    .soft{
+      height: 110vh;
+    }
+
+    .skills-grid-soft {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .soft-skill-card {
+      min-width: 250px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
   

@@ -1,105 +1,112 @@
+.soft {
+  height: 100vh;
+  background-color: #b86adf; /* Morado clarito */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 
-.soft{
-    height: 100vh;
-    background-color: #b86adf; /* Morado clarito */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-   
-  }
-  
-  .soft-title {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 4rem;
-    text-align: center;
-    word-break: break-word;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-  }
+.soft-title {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
 
-  
-  /* Grid de cards */
+/* Grid de cards */
+.skills-grid-soft {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+.soft-skill-card {
+  width: 200px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.soft-skill-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e5e5;
+  color: #1c1c1c;
+  border-radius: 12px;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-back {
+  background-color: #1c1c1c;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.skill-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-description,
+.skill-example {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ===== Media Queries para Responsividad ===== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
   .skills-grid-soft {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Card (ya lo habíamos hecho pero lo adapto) */
-  .soft-skill-card {
-    width: 200px;
-    height: 180px;
-    perspective: 1000px;
-  }
-  
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  
-  .soft-skill-card:hover .card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    background-color: #e5e5e5;
-    color: #1c1c1c;
-    border-radius: 12px;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .card-back {
-    background-color: #1c1c1c;
-    color: white;
-    transform: rotateY(180deg);
-  }
-  
-  .skill-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .skill-description, .skill-example {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  
-  @media (max-width: 1024px) {
-    .skills-grid-soft {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    
-    .soft{
-      height: 110vh;
-    }
+}
 
-    .skills-grid-soft {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  
-    .soft-skill-card {
-      min-width: 250px;
-      max-width: 100%;
-      margin: 0 auto;
-    }
+/* Móviles */
+@media (max-width: 600px) {
+  .soft {
+    height: auto; /* Permite que crezca con el contenido */
+    padding: 1rem;
   }
-  
+
+  .soft-title {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .skills-grid-soft {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .soft-skill-card {
+    min-width: 3rem;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}

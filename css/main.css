@@ -181,36 +181,6 @@
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    height: auto;
-  }
-  .hero-left,
-  .hero-right {
-    flex: none;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .hero-left {
-    align-items: center;
-  }
-  .hero-right {
-    align-items: center;
-  }
-  .hero-name {
-    font-size: 3.5rem;
-  }
-  .label-top,
-  .label-bottom {
-    font-size: 1.5rem;
-    width: auto;
-    max-width: 90%;
-    text-align: center;
-  }
-}
 .about-section {
   background-color: #D9D9D9; /* gris claro como en el diseño */
   padding: 4rem 2rem;
@@ -264,32 +234,11 @@
   color: #111;
 }
 
-@media screen and (max-width: 768px) {
-  .about-section {
-    height: auto;
-    padding: 3rem 1rem;
-  }
-  .about-container {
-    flex-direction: column;
-    gap: 3rem;
-    text-align: center;
-  }
-  .about-image {
-    width: 200px;
-    box-shadow: -8px 8px 0px #1A1919;
-  }
-  .about-title {
-    font-size: 2rem;
-  }
-  .about-text p {
-    font-size: 1.3rem;
-  }
-}
 .education {
   padding: 3rem 2rem;
   background-color: white;
   text-align: center;
-  height: 80vh;
+  height: 100% vh;
 }
 
 .studies-title {
@@ -317,8 +266,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  max-width: 400px;
+  width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 8rem;
 }
 
 .study-icon img {
@@ -359,6 +309,11 @@
 
 .study-back {
   opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
 }
 
 .study-front,
@@ -380,7 +335,7 @@
   font-size: 1rem;
   color: #ccc;
   margin: 0;
-  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .study-card:hover .study-front {
@@ -391,45 +346,21 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
-  .education {
-    height: auto;
-    padding: 2rem 1rem;
-  }
-  .studies-title {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    padding: 0.5rem 0.8rem;
-  }
-  .studies-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+@media (max-width: 768px) {
   .study-card {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem 1rem;
-  }
-  .study-icon img {
-    width: 60px;
-    height: 60px;
-  }
-  .study-title {
-    font-size: 1.2rem;
-  }
-  .study-school,
-  .study-dates,
-  .study-description {
-    font-size: 0.95rem;
-  }
-  .study-content {
-    position: static;
+    height: auto;
+    width: 85%;
   }
   .study-front,
   .study-back {
     position: static;
-    opacity: 1;
+    opacity: 1 !important;
+    transition: none;
+  }
+  .study-back {
+    display: block;
+    padding-top: 1rem;
   }
   .study-card:hover .study-front,
   .study-card:hover .study-back {
@@ -555,48 +486,11 @@
   color: #fff;
 }
 
-@media (max-width: 1024px) {
-  .container-project {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .container-project {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .card .face {
-    width: 100%;
-    max-width: 90vw;
-  }
-}
-@media (max-width: 480px) {
-  .title-projects {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  .card .face.face1 .content img {
-    max-width: 80px;
-  }
-  .card .face.face1 .content h3 {
-    font-size: 1.2em;
-  }
-  .p-title {
-    font-size: 0.9rem;
-  }
-  .card .face.face2 {
-    padding: 15px;
-  }
-  .card .face.face2 .content a {
-    font-size: 0.9rem;
-    padding: 4px 8px;
-  }
-}
 .skills {
   padding: 3rem 2rem;
   background-color: #e5e5e5;
   text-align: center;
-  height: 135vh;
+  height: 100%;
 }
 
 .main-title {
@@ -700,12 +594,6 @@
   box-shadow: 0 0 10px rgba(197, 134, 255, 0.5);
 }
 
-@media (max-width: 768px) {
-  .skills-grid-tech {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 .soft {
   height: 100vh;
   background-color: #b86adf; /* Morado clarito */
@@ -714,16 +602,16 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .soft-title {
   font-size: 2rem;
   color: white;
-  margin-bottom: 4rem;
   text-align: center;
   word-break: break-word;
   padding: 0 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Grid de cards */
@@ -733,7 +621,7 @@
   gap: 2rem;
 }
 
-/* Card (ya lo habíamos hecho pero lo adapto) */
+/* Card */
 .soft-skill-card {
   width: 200px;
   height: 180px;
@@ -752,7 +640,8 @@
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   width: 100%;
   height: 100%;
   background-color: #e5e5e5;
@@ -779,27 +668,36 @@
   margin-bottom: 0.5rem;
 }
 
-.skill-description, .skill-example {
+.skill-description,
+.skill-example {
   font-size: 0.9rem;
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+/* ===== Media Queries para Responsividad ===== */
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
   .skills-grid-soft {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+/* Móviles */
+@media (max-width: 600px) {
   .soft {
-    height: 110vh;
+    height: auto; /* Permite que crezca con el contenido */
+    padding: 1rem;
+  }
+  .soft-title {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
   }
   .skills-grid-soft {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   .soft-skill-card {
-    min-width: 250px;
-    max-width: 100%;
+    min-width: 3rem;
+    max-width: 300px;
     margin: 0 auto;
   }
 }
@@ -811,6 +709,80 @@
 
 body {
   font-family: "Lexend Exa", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-center {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .about-container {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .education {
+    height: auto;
+  }
+  .studies-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    height: auto;
+  }
+  .container-project {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .skills {
+    height: auto;
+  }
+  .footer-container {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    height: auto;
+    gap: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .nav-center {
+    gap: 20px;
+  }
+  .about-container {
+    gap: 4rem;
+  }
+  .container-project {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-left, .hero-right {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .hero-name {
+    font-size: 3rem;
+  }
+  .label-top, .label-bottom {
+    font-size: 1.3rem;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

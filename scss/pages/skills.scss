@@ -2,7 +2,7 @@
   padding: 3rem 2rem;
   background-color: #e5e5e5;
   text-align: center;
-  height: 135vh;
+  height: 100%;
 }
 
 .main-title {
@@ -109,10 +109,4 @@
 
 
 
-@media (max-width: 768px) {
-  .skills-grid-tech {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 

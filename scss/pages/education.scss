@@ -6,7 +6,7 @@
     padding: 3rem 2rem;
     background-color:white;
     text-align: center;
-    height: 80vh;
+    height: 100%vh;
   }
   
   .studies-title {
@@ -36,8 +36,9 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    max-width: 400px;
+    width: 400px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    height: 8rem;
   }
   
   .study-icon img {
@@ -79,8 +80,14 @@
   
   .study-back {
     opacity: 0;
+    display: flex; // nuevo
+    align-items: center; // centra verticalmente
+    justify-content: center; // centra horizontalmente
+    height: 100%; // asegúrate de que ocupe todo el alto
+    padding: 1rem;
   }
-  
+
+
   
 
   .study-front,
@@ -103,9 +110,8 @@
     font-size: 1rem;
     color: #ccc;
     margin: 0;
-    margin-top: 0.5rem;
+    text-align: center;
   }
-
 
 .study-card:hover .study-front {
     opacity: 0;
@@ -115,53 +121,23 @@
     opacity: 1;
   }
 
-  @media screen and (max-width: 768px) {
-    .education {
-      height: auto;
-      padding: 2rem 1rem;
-    }
-  
-    .studies-title {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      padding: 0.5rem 0.8rem;
-    }
-  
-    .studies-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-  
+  @media (max-width: 768px) {
     .study-card {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1.5rem 1rem;
-    }
-  
-    .study-icon img {
-      width: 60px;
-      height: 60px;
-    }
-  
-    .study-title {
-      font-size: 1.2rem;
-    }
-  
-    .study-school,
-    .study-dates,
-    .study-description {
-      font-size: 0.95rem;
-    }
-  
-    .study-content {
-      position: static;
+      height: auto;
+      width: 85%;
     }
   
     .study-front,
     .study-back {
       position: static;
-      opacity: 1;
+      opacity: 1 !important;
+      transition: none;
+    }
+  
+    .study-back {
+      display: block; // Mostrar la descripción normalmente
+      padding-top: 1rem;
     }
   
     .study-card:hover .study-front,
@@ -169,4 +145,3 @@
       opacity: 1;
     }
   }
-  

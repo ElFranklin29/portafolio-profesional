@@ -63,16 +63,24 @@
     transform: translateY(0);
 }
 
-.card .face.face1 .content{
+
+
+.card .face.face1 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0.2;
     transition: 0.5s;
-}
+    height: 100%; /* asegura que ocupe todo el espacio disponible */
+  }
 
 .card:hover .face.face1 .content{
     opacity: 1;
 }
 
  .card .face.face1 .content img{
+    align-items: center;
     max-width: 100px;
 }
 

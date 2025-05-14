@@ -1,0 +1,29 @@
+.colaboraciones {
+  padding: 3rem 1rem;
+  background-color: #f5f5f5; /* opcional, para distinguir la sección */
+  text-align: center;
+}
+
+.colaboraciones h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.colaboraciones-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Para que se vean bien en móviles */
+}
+
+.colaboraciones-imgs a img {
+  width: 250px; /* Ajusta según tamaño real de tus imágenes */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.colaboraciones-imgs a img:hover {
+  transform: scale(1.05);
+}
